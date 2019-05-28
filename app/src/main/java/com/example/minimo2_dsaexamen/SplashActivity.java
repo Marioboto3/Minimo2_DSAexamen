@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.ImageView;
+
+import com.squareup.picasso.Picasso;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -15,6 +18,8 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         // Tenemos una plantilla llamada splash.xml donde mostraremos la información que queramos (logotipo, etc.)
         setContentView(R.layout.splash);
+        ImageView image = findViewById(R.id.imageView);
+        Picasso.get().load("https://upload.wikimedia.org/wikipedia/ca/thumb/b/b5/Logo_upc.svg/1024px-Logo_upc.svg.png").into(image);
 
         new Handler().postDelayed(new Runnable(){
             public void run(){
