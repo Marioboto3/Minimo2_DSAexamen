@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
         progressBar.setVisibility(View.VISIBLE);
 
-        Call<Museums> call = api.museumsInfo(0,5);
+        Call<Museums> call = api.museumsInfo(0,40);
         call.enqueue(new Callback<Museums>() {
             @Override
             public void onResponse(Call<Museums> call, Response<Museums> response) {
